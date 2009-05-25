@@ -102,7 +102,7 @@ class action_plugin_openid extends DokuWiki_Action_Plugin {
 
 	/**
 	 * Return an OpenID Consumer
-	 */    
+	 */
 	function getConsumer()
 	{
 		global $conf;
@@ -130,7 +130,7 @@ class action_plugin_openid extends DokuWiki_Action_Plugin {
 		global $ID, $conf, $auth;
 
 		$user = $_SERVER['REMOTE_USER'];
-        
+
 		// Do not ask the user a password he didn't set
 		if ($event->data == 'profile') {
 			$conf['profileconfirm'] = 0;
@@ -229,7 +229,7 @@ class action_plugin_openid extends DokuWiki_Action_Plugin {
 			}
 
 		}
-        
+
 		return; // fall through to what ever action was called
 	}
 
@@ -303,7 +303,7 @@ class action_plugin_openid extends DokuWiki_Action_Plugin {
 
 	/**
 	 * Generate the OpenID login/complete forms
-	 */    
+	 */
 	function get_openid_form($mode)
 	{
 		global $USERINFO, $lang;
@@ -330,7 +330,7 @@ class action_plugin_openid extends DokuWiki_Action_Plugin {
 		$form->endFieldset();
 		return $form;
 	}
-    
+
 	/**
 	 * Insert link to OpenID into usual login form
 	 */
@@ -418,8 +418,8 @@ class action_plugin_openid extends DokuWiki_Action_Plugin {
 			msg($lang['regmissing'], -1);
 			return false;
 		}
-                
-                if (!mail_isvalid($_POST['email'])) {
+
+ 		if (!mail_isvalid($_POST['email'])) {
 			msg($lang['regbadmail'], -1);
 			return false;
 		}
