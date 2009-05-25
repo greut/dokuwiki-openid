@@ -417,7 +417,9 @@ class action_plugin_openid extends DokuWiki_Action_Plugin {
 		if (empty($_POST['login']) || empty($_POST['fullname']) || empty($_POST['email'])) {
 			msg($lang['regmissing'], -1);
 			return false;
-		} else if (!mail_isvalid($_POST['email'])) {
+		}
+                
+                if (!mail_isvalid($_POST['email'])) {
 			msg($lang['regbadmail'], -1);
 			return false;
 		}

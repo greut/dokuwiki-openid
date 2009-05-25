@@ -1,0 +1,4 @@
+====== OpenID-Anmeldung ======
+
+Sie können zu diesem Wiki mit [[http://openid.net|OpenID]] verbinden.
+Bitte geben Ihren Benutzernamen OpenID (URL) in das untenstehende Feld ein.
